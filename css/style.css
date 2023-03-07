@@ -1,0 +1,352 @@
+/* Dimensioni da utilizzare
+1440x1100
+878x1095
+639x1095
+522x1095
+
+1398x221 QUANDO VIENE SCHIACCIATO
+*/
+
+/* Si parte da Desktop first 1440x1100 */
+/* * General //////////////////////////////////////////////////////////////////////////////////*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+/* * utility //////////////////////////////////////////////////////////////////////////////////*/
+.debug{
+  border: 1px dashed #c8ff2f;
+}
+
+.debug_b{
+  border: 1px dashed #c8ff2f;
+}
+
+
+
+
+
+
+
+
+
+
+.header-main-container{
+  /* ! 90px è l'altezza footer */
+  height: calc(100vh - 90px);
+  /* ! aggiunge la scrollbar - non spacca il layout*/
+  overflow: auto;
+}
+
+
+
+
+
+/* * HEADER ////////////////////////////////////////////////////////////////////////////////// */
+header{
+  height: 90px;
+  /* height: 64px; */
+  background-color: #080B12;
+
+  position: relative;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * MAIN ////////////////////////////////////////////////////////////////////////////////// */
+main{
+  background-color: #141922;
+
+
+}
+
+
+/* * SIDEBAR /////////////////////////////////////////////////////////////////////////////////////////////////// */
+.sidenav {
+  height: 100%;
+  /* width: 160px; */
+  width: 240px;
+  /* si posiziona in alto a sinistra (anche sopra all'header) */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #000000;
+  overflow-x: hidden;
+  padding-top: 24px
+}
+
+.sidenav a {
+  text-decoration: none;
+  display: block;
+  padding: 6px 8px 6px 16px;
+  color: #6F6F6F;
+  font-size: 0.7rem;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.container_main {
+  margin-left: 240px; 
+  font-size: 1.3rem;
+  padding: 0px 10px;
+}
+
+
+
+
+
+
+
+/* * FOOTER ////////////////////////////////////////////////////////////////////////////////// */
+footer{
+  height: 90px;
+
+
+  background-color: #282828;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * RESPONSIVE *************************************************************************************************************************** */
+@media screen and (max-width: 878px) {
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 639px) {
+  
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 522px) {
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
