@@ -19,8 +19,22 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
+ul{
+  list-style: none;
+}
 
+li{
 
+}
+
+hr{
+  border-width:0;
+  border-bottom: #6F6F6F 0.1rem solid;
+}
+
+.d-flex{
+  display: flex;
+}
 
 
 /* * utility //////////////////////////////////////////////////////////////////////////////////*/
@@ -43,7 +57,7 @@ body{
 
 .header-main-container{
   /* ! 90px è l'altezza footer */
-  height: calc(100vh - 90px);
+  height: calc(100vh - 100px);
   /* ! aggiunge la scrollbar - non spacca il layout*/
   overflow: auto;
 }
@@ -54,7 +68,7 @@ body{
 
 /* * HEADER ////////////////////////////////////////////////////////////////////////////////// */
 header{
-  height: 90px;
+  height: 100px;
   /* height: 64px; */
   background-color: #080B12;
 
@@ -81,35 +95,7 @@ header{
 main{
   background-color: #141922;
 
-
-}
-
-
-/* * SIDEBAR /////////////////////////////////////////////////////////////////////////////////////////////////// */
-.sidenav {
-  height: 100%;
-  /* width: 160px; */
-  width: 240px;
-  /* si posiziona in alto a sinistra (anche sopra all'header) */
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background-color: #000000;
-  overflow-x: hidden;
-  padding-top: 24px
-}
-
-.sidenav a {
-  text-decoration: none;
-  display: block;
-  padding: 6px 8px 6px 16px;
-  color: #6F6F6F;
-  font-size: 0.7rem;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
+  
 }
 
 .container_main {
@@ -124,9 +110,128 @@ main{
 
 
 
+
+
+
+
+
+
+/* * SIDEBAR /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.sidenav {
+  height: 100%;
+  /* width: 160px; */
+  width: 240px;
+  /* si posiziona in alto a sinistra (anche sopra all'header) */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #000000;
+  overflow-x: hidden;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 110px;
+
+
+}
+
+.sidenav *{
+  padding: 0 0 5px 4px;
+}
+
+.sidenav img{
+  height: 86px;
+  max-width: 154px;
+  width: 100%;
+  margin: 10px 0 0 15px;
+  /* display: flex;
+  flex-shrink: 0; */
+  /* padding-left: 10px; */
+  /* margin-bottom: 10px; */
+
+}
+
+.sidenav h3, .sidenav a {
+  color: white;
+  margin-left: 10px;
+  /* display: inline-block; */
+}
+
+
+.explore li a, .playlist li a:first-child{
+  font-size: 1rem;
+}
+
+.sidenav .fa-solid {
+padding-left: 0;
+padding-right: 5px;
+}
+
+.sidenav .explore .fa-solid {
+  font-size: 1.5rem;
+}
+
+.fa-square-plus{
+  font-size: 2.5rem;
+  vertical-align: middle;
+}
+
+.sidenav a {
+  text-decoration: none;
+  display: block;
+  color: #6F6F6F;
+  font-size: 0.6rem;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.container-sidenav-down div:last-child{
+  font-size: 1.17em;
+  font-weight: bold;
+  color: white;
+
+}
+
+.container-sidenav-down hr{
+  margin: 0 18px 20px 18px;
+}
+
+.fa-circle-user{
+  font-size: 2.5rem;
+  vertical-align: middle;
+  background-color: #6F6F6F;
+  color: white;
+  border-radius: 50px;
+  padding: 0;
+  margin-left: 15px;
+}
+
+.mobile-app a{
+  font-size: 1rem;
+
+}
+
+.name-profile{
+  margin-left: 5px;
+
+}
+
+
+
+
+
+
 /* * FOOTER ////////////////////////////////////////////////////////////////////////////////// */
 footer{
-  height: 90px;
+  height: 100px;
+  width: 100vw;
+  position: fixed;
+  z-index: 2;
 
 
   background-color: #282828;
