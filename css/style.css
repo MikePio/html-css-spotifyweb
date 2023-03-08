@@ -132,10 +132,18 @@ main{
   
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 110px;
+  /* justify-content: space-between; */
+
+  /* padding-bottom: 110px; */
+
+  /* flex-shrink: 0; */
+  overflow-y: hidden;
 
 
+  /* ! 90px è l'altezza footer */
+  height: calc(100vh - 100px);
+  /* ! aggiunge la scrollbar - non spacca il layout*/
+  /* overflow: auto; */
 }
 
 .sidenav *{
@@ -161,8 +169,15 @@ main{
 }
 
 
-.explore li a, .playlist li a:first-child{
+.explore li a, .playlist a:first-child{
   font-size: 1rem;
+}
+
+.playlist-names{
+  /* * 520px è la somma del footer + container-sidenav-down + (container-sidenav-up - playlist-names)  */
+  height: calc(100vh - 520px);
+  /* ! aggiunge la scrollbar - non spacca il layout*/
+  overflow: auto;
 }
 
 .sidenav .fa-solid {
@@ -188,6 +203,22 @@ padding-right: 5px;
 
 .sidenav a:hover {
   color: #f1f1f1;
+}
+
+.container-sidenav-up{
+  /* height: 450px; */
+
+  height: 100%;
+  min-height: 450px;
+  max-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.container-sidenav-down{
+  min-height: 110px;
+  padding: 0;
+  margin: 0;
 }
 
 .container-sidenav-down div:last-child{
