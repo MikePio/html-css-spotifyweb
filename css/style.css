@@ -37,6 +37,11 @@ hr{
   border-bottom: #6F6F6F 0.1rem solid;
 }
 
+h2{
+  color: white;
+  font-weight: bold;
+}
+
 .d-flex{
   display: flex;
 }
@@ -96,7 +101,7 @@ header{
   border-radius: 30px;
   margin-right: 10px;
   font-weight: bold;
-
+  cursor: pointer;
 }
 
 
@@ -124,7 +129,7 @@ main{
 .container_main {
   margin-left: 240px;
   font-size: 1.3rem;
-  padding: 0px 10px;
+  /* padding: 0px 10px; */
 }
 
 /* * barra di navigazione main ___________________________________________________________________*/
@@ -146,7 +151,69 @@ main{
   font-size: 0.9rem;
 }
 
+/* * main con i brani_____________________________________________________________________________ */
 
+.container-big-cards{
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 20px;
+}
+.container-big-cards h2{
+  padding: 30px 0 15px 0;
+}
+
+.container-cards{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  
+  
+}
+
+/* .container-cards .card{
+  width: calc(100% / 6.7);
+} */
+
+
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* width: 300px; */
+  
+  /* ? CORRETTO????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????  */
+  width: calc(100% / 6.7);
+  
+  margin-top: 30px;
+  margin-right: 15px;
+  text-align: center;
+}
+
+.card > *{
+  padding-bottom: 10px;
+}
+
+.card img{
+  /* * l'immagine diventa il 100% del contenitore */
+  width: 100%;
+}
+
+.card h3{
+  color: white;
+  padding-top: 15px;
+}
+
+.card .creator, .subtitle{
+  color: #6F6F6F;
+  font-size: 1rem;
+}
+
+/* section3  */
+.popular-artists img{
+  border-radius: 100%;
+}
 
 
 
