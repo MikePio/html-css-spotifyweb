@@ -17,6 +17,7 @@
 
 body{
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: 650;
 }
 
 ul{
@@ -25,6 +26,10 @@ ul{
 
 li{
 
+}
+
+a{
+  text-decoration: none;
 }
 
 hr{
@@ -73,6 +78,24 @@ header{
   background-color: #080B12;
 
   position: relative;
+  /* position: fixed;
+  top:0; */
+  
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.upgrade{
+  height: 50px;
+  width: 215px;
+  background-color: #080B12;
+  color: white;
+  border: 1px white solid;
+  border-radius: 30px;
+  margin-right: 10px;
+  font-weight: bold;
 
 }
 
@@ -104,8 +127,24 @@ main{
   padding: 0px 10px;
 }
 
+/* * barra di navigazione main ___________________________________________________________________*/
 
+.nav-container-main{
+}
 
+.nav-container-main ul{
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container-main a{
+  color: #6F6F6F;
+  padding: 10px;
+  font-size: 0.9rem;
+}
 
 
 
@@ -162,7 +201,6 @@ main{
 .sidenav h3, .sidenav a {
   color: white;
   margin-left: 10px;
-  /* display: inline-block; */
 }
 
 
@@ -203,11 +241,9 @@ padding-right: 5px;
 }
 
 .container-sidenav-up{
-  /* height: 450px; */
-
   height: 100%;
   /* min-height: 450px; */
-  min-height: 330px;
+  min-height: 330px; /* ! IMPORTANTE QUANDO SI VA A RIDURRE L'ALTEZZA */
   max-height: 100%;
   padding: 0;
   margin: 0;
