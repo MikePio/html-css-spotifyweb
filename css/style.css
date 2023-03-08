@@ -73,7 +73,7 @@ header{
   background-color: #080B12;
 
   position: relative;
-  
+
 }
 
 
@@ -95,11 +95,11 @@ header{
 main{
   background-color: #141922;
 
-  
+
 }
 
 .container_main {
-  margin-left: 240px; 
+  margin-left: 240px;
   font-size: 1.3rem;
   padding: 0px 10px;
 }
@@ -120,30 +120,27 @@ main{
 
 .sidenav {
   height: 100%;
-  /* width: 160px; */
+  padding-bottom: 110px; 
+  /* OPPURE */
+  /* ! 100px è l'altezza footer */
+  /* height: calc(100vh - 100px); */
   width: 240px;
+  overflow-y: hidden;
+
   /* si posiziona in alto a sinistra (anche sopra all'header) */
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
-  background-color: #000000;
-  overflow-x: hidden;
   
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  /* justify-content: space-between; */ /** in questo caso non è necessario in quanto container-sidenav-up ha height 100% */
+  
+  background-color: #000000;
+  overflow-x: hidden;
 
-  /* padding-bottom: 110px; */
-
-  /* flex-shrink: 0; */
-  overflow-y: hidden;
-
-
-  /* ! 90px è l'altezza footer */
-  height: calc(100vh - 100px);
-  /* ! aggiunge la scrollbar - non spacca il layout*/
-  /* overflow: auto; */
+  /* flex-shrink: 0; */ /* in questo caso non è necessario*/
 }
 
 .sidenav *{
@@ -209,7 +206,8 @@ padding-right: 5px;
   /* height: 450px; */
 
   height: 100%;
-  min-height: 450px;
+  /* min-height: 450px; */
+  min-height: 330px;
   max-height: 100%;
   padding: 0;
   margin: 0;
@@ -219,6 +217,7 @@ padding-right: 5px;
   min-height: 110px;
   padding: 0;
   margin: 0;
+  background-color: #000000;
 }
 
 .container-sidenav-down div:last-child{
@@ -287,7 +286,7 @@ footer{
 
 /* * RESPONSIVE *************************************************************************************************************************** */
 @media screen and (max-width: 878px) {
-  
+
 }
 
 
@@ -302,7 +301,7 @@ footer{
 
 
 @media screen and (max-width: 639px) {
-  
+
 }
 
 
@@ -313,7 +312,7 @@ footer{
 
 
 @media screen and (max-width: 522px) {
-  
+
 }
 
 
