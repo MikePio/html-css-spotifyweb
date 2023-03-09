@@ -79,17 +79,19 @@ h2{
 /* * HEADER ////////////////////////////////////////////////////////////////////////////////// */
 header{
   height: 100px;
-  /* height: 64px; */
-  background-color: #080B12;
+  width: 100%;
 
-  position: relative;
-  /* position: fixed;
-  top:0; */
+  /* height: 64px; */
+  background-color: #080b127d;
+
+  position: fixed;
+  /* top:0; */
+  z-index: 1;
   
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
+  
 }
 
 .upgrade{
@@ -99,35 +101,40 @@ header{
   color: white;
   border: 1px white solid;
   border-radius: 30px;
-  margin-right: 10px;
   font-weight: bold;
   cursor: pointer;
+  margin-right: 25px;
 }
 
+/* * Animazione per far diventare più grande il pulsante quando si passa con il cursore */
+.upgrade:hover{
+  transform: scale(1.1);
+}
 
+/* *  OPPURE altra animazione che fa sempre lo stesso */
+/* .upgrade:hover {
+  animation: grow 0.1s ease-in-out forwards;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+} */
 
 /* * MAIN ////////////////////////////////////////////////////////////////////////////////// */
 main{
   background-color: #141922;
-
-
 }
 
 .container_main {
+  padding-top: 100px;
+
   margin-left: 240px;
+
   font-size: 1.3rem;
   /* padding: 0px 10px; */
 }
@@ -141,6 +148,9 @@ main{
   height: 60px;
   display: flex;
   flex-direction: row;
+
+  flex-wrap: wrap;
+
   justify-content: center;
   align-items: center;
 }
@@ -149,6 +159,15 @@ main{
   color: #6F6F6F;
   padding: 10px;
   font-size: 0.9rem;
+}
+
+.nav-container-main a:focus{
+  border-bottom: 3px solid #c8ff2f ;
+
+}
+
+.nav-container-main a:hover{
+  color: #f1f1f1;
 }
 
 /* * main con i brani_____________________________________________________________________________ */
@@ -167,8 +186,6 @@ main{
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  
-  
 }
 
 /* .container-cards .card{
@@ -191,13 +208,54 @@ main{
   text-align: center;
 }
 
-.card > *{
-  padding-bottom: 10px;
+.card > *:not(:first-child){
+  margin-bottom: 10px;
 }
 
 .card img{
   /* * l'immagine diventa il 100% del contenitore */
   width: 100%;
+}
+
+/* * PROCEDIMENTO PER FAR COMPARIRE L'ICONA */
+.song-image {
+  position: relative;
+  /* serve per nascondere contenuti che escono dai limiti del contenitore div*/
+  /* overflow: hidden;  */
+}
+
+/* L'immagine diventa semi trasparente */
+.song-image:hover img {
+  opacity: 0.5;
+}
+
+/*  Una volta in hover sull'immagine, con ::after si applica il background nero opaco con position absolute*/
+.song-image:hover::after {
+  content: "";
+  background-color: #0000007d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* icona che scompare in hover con display none */
+.song-image i {
+  display: none;
+  color: white;
+  font-size: 3.5rem;
+}
+
+/* icona che compare in hover con display block */
+.song-image:hover i {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
 .card h3{
@@ -215,13 +273,6 @@ main{
   border-radius: 100%;
 }
 
-
-
-
-
-
-
-
 /* * SIDEBAR /////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .sidenav {
@@ -237,7 +288,7 @@ main{
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 4;
   
   display: flex;
   flex-direction: column;
@@ -273,6 +324,10 @@ main{
 
 .explore li a, .playlist a:first-child{
   font-size: 1rem;
+}
+
+.explore a:focus{
+  border-left: 3px solid #c8ff2f ;
 }
 
 .playlist-names{
@@ -364,14 +419,270 @@ footer{
   height: 100px;
   width: 100vw;
   position: fixed;
-  z-index: 2;
-
+  z-index: 999;
 
   background-color: #282828;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* align-items: flex-start; */
+
+}
+
+/* dimensioni fisse footer laterale */
+/* width: 240px; */
+
+/* dimensioni footer centrale */
+/* 100% - 480px */
+/* 100vh - 480px */
+
+/* 552-480= 72px */
+/* ? min-width: 72px; */
+/* ? FORSE MEGLIO */
+/* 552/3=184px */
+/* ? min-width: 184px; */ 
+
+/* footer  */
+/* 552px */
+
+.footer-container-left,
+.footer-container-center,
+.footer-container-right{
+  /* 552/3=184px */
+  min-width: 184px;
+}
+
+.footer-container-left,
+.footer-container-right{
+  width: 240px;
 }
 
 
+/* * footer sinistra  */
+.footer-container-left{
+  height: 100px;
+  padding: 0 10px;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.container-listening-music{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+
+.container-listening-music img{
+  width: 60px;
+  height: 60px;
+  
+}
+
+.container-listening-music *{
+  margin: 0 3px;
+}
+
+.title-singer-listening-music{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.title-song{
+  font-size: 0.9rem;
+  color: #6F6F6F;
+  padding-top: 2px;
+}
+
+.title-song:hover{
+  color: #f1f1f1;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.container-favourite-save{
+  display: flex;
+  /* ?????????????????????????????????????????????????????????????????? */
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.container-favourite-save *{
+  padding: 5px;
+  cursor: pointer;
+  color: #6F6F6F;
+
+}
+
+.fa-heart:hover, .fa-folder:hover{
+  color: #f1f1f1;
+}
+
+/* * footer centro */
+.footer-container-center{
+  height: 80px;
+  padding: 0 10px;
+
+  /* ?????????????????????????????????????????????????????????????????? */
+  width: 100%;
+  max-width: 480px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* ??????????????????????????????????????????????????????????????????? */
+  justify-content: space-around;
+
+}
+
+.footer-container-center-up{
+  height: 50%;
+  width: 184px;
+  font-size: 1.3rem;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.footer-container-center-up:hover *{
+  cursor: pointer;
+}
+
+.fa-circle-play{
+  font-size: 1.6rem;
+}
+
+/* * Animazione per far diventare più grande il pulsante quando si passa con il cursore */
+.fa-circle-play:hover{
+  transform: scale(1.2);
+}
+
+.footer-container-center-down{
+  height: 50%;
+  width: 100%;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container-center-down *{
+  margin: 0 2%;
+}
+
+.sound-bar{
+
+
+}
+
+.progress-bar {
+  display: block;
+  width: 100%;
+  height: 5px;
+  /* background-color: #eee; */
+  background-color: #6F6F6F;
+  /* border-radius: 2.5px; */
+  border-radius: 20px;
+  border: none;
+}
+
+.sound-bar {
+  display: block;
+  width: 100%;
+  min-width: 95px;
+  height: 5px;
+  /* background-color: #eee; */
+  background-color: #6F6F6F;
+  /* border-radius: 2.5px; */
+  border-radius: 20px;
+  border: none;
+}
+
+/* * :-webkit-progress-value e :-moz-progress-bar vengono utilizzati per mostrare il valore della progress bar su differenti browser */
+.progress-bar::-webkit-progress-value {
+  background-color: #ffffff;
+}
+
+.progress-bar::-moz-progress-bar{
+  background-color: #ffffff;
+}
+
+/* * cambia di colore il valore della progress bar quando si va in hover sulla barra (anche nello spazio vuoto) */
+.progress-bar:hover::-webkit-progress-value {
+  background-color: #ADFF2F;
+}
+
+.progress-bar:hover::-moz-progress-bar:hover .progress-bar{
+  background-color: #ADFF2F;
+}
+
+/* * Pallino bianco in song-bar */
+.song-bar::after{
+  content: "";
+  position: absolute;
+  /* right: 80px; */
+  right: 50%;
+  bottom: 25%;
+  
+  width: 10px;
+  height: 10px;
+  
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: 0;
+  /* transition: opacity 0.1s ease-in-out; */
+}
+
+/* * Pallino bianco in sound-bar */
+.sound-bar::after{
+  content: "";
+  position: absolute;
+  /* right: 80px; */
+  right: 30px;
+  bottom: 45px;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: 0;
+  /* transition: opacity 0.1s ease-in-out; */
+}
+
+/* * Pallino con hover */
+.progress-bar:hover::after  {
+  opacity: 1;
+}
+
+/* * footer destra */
+.footer-container-right{
+  height: 100px;
+  padding: 0 10px;
+  
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-container-right *{
+  margin: 0 7px;
+}
+
+.progress-bar.sound-bar{
+  /* width: 50%; */
+}
 
 
 

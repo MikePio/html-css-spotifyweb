@@ -31,8 +31,8 @@
             <li><a href="#"><i class="fa-solid fa-lines-leaning"></i>La tua libreria</li></a>
           </ul>
           <div class="playlist">
-            <a href="#"><i class="fa-solid fa-square-plus"></i>Crea Playlist</a>
             <h3>PLAYLIST</h3>
+            <a href="#"><i class="fa-solid fa-square-plus"></i>Crea Playlist</a>
           </div>
           <ul class="playlist-names">
             <li><a href="#">Nome playlist</a></li>
@@ -58,7 +58,7 @@
         <div class="nav-container-main">
           <nav>
             <ul>
-              <li><a href="#"> IN EVIDENZA</a></li>
+              <li><a href="#">IN EVIDENZA</a></li>
               <li><a href="#">PODCAST</a></li>
               <li><a href="#">CLASSIFICHE</a></li> 
               <li><a href="#">GENERI E MOOD</a></li> 
@@ -74,45 +74,78 @@
           <h2>Recently played</h2>
 
           <div class="container-cards">
-
-            <!-- * 1° card -->
+            
+            <!-- * 1° card test -->
             <div class="card square-card">
-              <img src="img/metal_lifting.jpg" alt="song_img">
+              <div class="song-image">
+                <img src="img/metal_lifting.jpg" alt="song_img">
+                <i class="fa-regular fa-circle-play"></i>
+              </div>
               <h3>Heavy Metal</h3>
               <div class="creator">Subtitle</div>
             </div>
 
+            <!-- ! 1° card da provare solo con .song-image:hover al posto di usare ::after {  -->
+            <!-- <div class="card square-card">
+              <div class="song-image">
+                display: none; in hover
+                <img src="img/metal_lifting.jpg" alt="song_img"> 
+                display block in hover
+                <div class="overlay"> 
+                  <img src="img/metal_lifting.jpg" alt="song_img">
+                  <i class="fa-regular fa-circle-play"></i>
+                </div>
+              </div>
+              <h3>Heavy Metal</h3>
+              <div class="creator">Subtitle</div>
+            </div> -->
+
             <!-- * 2° card -->
             <div class="card square-card">
-              <img src="img/stranger.jpeg" alt="song_img">
+              <div class="song-image">
+                <img src="img/stranger.jpeg" alt="song_img">
+                <i class="fa-regular fa-circle-play"></i>
+              </div>
               <h3>Strangers Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
               <div class="creator">Kyle Dixon & Michael Stein</div>
             </div>
 
             <!-- * 3° card -->
             <div class="card square-card">
-              <img src="img/aquietplace.jpeg" alt="song_img">
+              <div class="song-image">
+                <img src="img/aquietplace.jpeg" alt="song_img">
+                <i class="fa-regular fa-circle-play"></i>
+              </div>
               <h3>A quiet place</h3>
               <div class="creator">Subtitle</div>
             </div>
 
             <!-- * 4° card -->
             <div class="card square-card">
-              <img src="img/split.jpeg" alt="song_img">
+              <div class="song-image">
+                <img src="img/split.jpeg" alt="song_img">
+                <i class="fa-regular fa-circle-play"></i>
+              </div>
               <h3>Split</h3>
               <div class="creator">Subtitle</div>
             </div>
 
             <!-- * 5° card -->
             <div class="card square-card">
-              <img src="img/cure.jpeg" alt="song_img">
+              <div class="song-image">
+                <img src="img/cure.jpeg" alt="song_img">
+                <i class="fa-regular fa-circle-play"></i>
+              </div>
               <h3>A cure for wellness</h3>
               <div class="creator">Subtitle</div>
             </div>
 
             <!-- * 6° card -->
             <div class="card square-card">
-              <img src="img/sinister.jpeg" alt="song_img">
+              <div class="song-image">
+                <img src="img/sinister.jpeg" alt="song_img">
+                <i class="fa-regular fa-circle-play"></i>
+              </div>
               <h3>Sinister</h3>
               <div class="creator">Subtitle</div>
             </div>
@@ -132,13 +165,19 @@
 
             <!-- * 1° card -->
             <div class="card square-card">
-              <img src="img/radar.jpeg" alt="song_img">
+              <div class="song-image">
+                <img src="img/radar.jpeg" alt="song_img">
+                <i class="fa-regular fa-circle-play"></i>
+              </div>
               <h3>Relased Radar</h3>
             </div>
 
             <!-- * 2° card -->
             <div class="card square-card">
-              <img src="img/mixdaily.jpeg" alt="song_img">
+              <div class="song-image">
+                <img src="img/mixdaily.jpeg" alt="song_img">
+                <i class="fa-regular fa-circle-play"></i>
+              </div>
               <h3>Daily Mix 1</h3>
             </div>
 
@@ -157,14 +196,20 @@
 
             <!-- * 1° card -->
             <div class="card square-card">
-              <img src="img/youg.jpeg" alt="song_img">
+              <div class="song-image">
+                <img src="img/youg.jpeg" alt="song_img">
+                <i class="fa-regular fa-circle-play"></i>
+              </div>
               <h3>Young Beautiful</h3>
               <div class="creator">Lana Del Rey</div>
             </div>
 
             <!-- * 2° card -->
             <div class="card square-card">
-              <img src="img/einaudi.jpeg" alt="song_img">
+              <div class="song-image">
+                <img src="img/einaudi.jpeg" alt="song_img">
+                <i class="fa-regular fa-circle-play"></i>
+              </div>
               <h3>Lorem Ipsum</h3>
               <div class="creator">Eugenio Einaudi</div>
             </div>
@@ -173,16 +218,74 @@
 
         </section>
 
-
-
       </div>
-    
 
     </main>
   </div>
   
-  
+  <!-- * footer -->
   <footer>
+    
+    <!-- * footer sinistra -->
+    <div class="footer-container-left">
+      <div class="container-listening-music">
+        <img src="img/sinister.jpeg" alt="img_song_listening">
+        <div class="title-singer-listening-music">
+          <h4>Sinister</h4>
+          <div class="title-song">Nome brano</div>
+        </div>
+      </div>
+      <div class="container-favourite-save">
+        <!-- heart -->
+        <i class="fa-regular fa-heart"></i>
+        <!-- folder -->
+        <i class="fa-regular fa-folder"></i>
+      </div>
+      
+    </div>
+    
+    <!-- * footer centro -->
+    <div class="footer-container-center">
+      <div class="footer-container-center-up">
+        <!-- riproduzione casuale -->
+        <i class="fa-solid fa-shuffle"></i>
+        <!-- brano a sinistra -->
+        <i class="fa-solid fa-backward-step"></i>
+        <!-- play button -->
+        <i class="fa-regular fa-circle-play"></i>
+        <!-- brano a destra -->
+        <i class="fa-solid fa-forward-step"></i>
+        <!-- riproduci -->
+        <i class="fa-solid fa-rotate-right"></i>
+      </div>
+      <div class="footer-container-center-down">
+        <div>0:25</div>
+        <!-- <div>linea</div> -->
+        <!-- <br class="song-bar"> -->
+        <progress class="progress-bar song-bar" value="50" max="100"></progress>
+        
+        <div>4:35</div>
+      </div>
+    </div>
+    
+    <!-- * footer destra -->
+    <div class="footer-container-right">
+      <!-- icona playlist brani elenco -->
+      <i class="fa-solid fa-list-ul"></i>
+      <!-- <i class="fa-solid fa-list"></i> -->
+      <!-- schermo pc laptop monitor -->
+      <!-- <i class="fa-solid fa-desktop"></i> -->
+      <i class="fa-solid fa-tv"></i>
+      <!-- audio Soundtrack  -->
+      <i class="fa-solid fa-volume-high"></i>
+      
+      <!-- <div>linea</div> -->
+      <!-- <br class="song-bar sound-bar"> -->
+
+      <progress class="progress-bar sound-bar" value="80" max="100"></progress>
+      
+
+    </div>
 
 
   </footer>
