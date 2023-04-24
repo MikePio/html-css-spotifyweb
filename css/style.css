@@ -159,11 +159,17 @@ main{
   color: #6F6F6F;
   padding: 10px;
   font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.nav-container-main li:first-child a{
+  border-bottom: 3px solid #c8ff2f ;
+  color: white;
 }
 
 .nav-container-main a:focus{
   border-bottom: 3px solid #c8ff2f ;
-
+  color: white;
 }
 
 .nav-container-main a:hover{
@@ -215,6 +221,8 @@ main{
 .card img{
   /* * l'immagine diventa il 100% del contenitore */
   width: 100%;
+  /* * IMPORTATNTE UTILIZZARE DISPLAY:BLOCK in quanto le immagini sono display: inline-block e si genera un bordo nero sotto l'immagine */
+  display: block;
 }
 
 /* * PROCEDIMENTO PER FAR COMPARIRE L'ICONA */
@@ -321,13 +329,18 @@ main{
   margin-left: 10px;
 }
 
-
 .explore li a, .playlist a:first-child{
   font-size: 1rem;
 }
 
-.explore a:focus{
+.explore li:first-child a{
   border-left: 3px solid #c8ff2f ;
+  color: white;
+}
+
+.explore li a:focus{
+  border-left: 3px solid #c8ff2f ;
+  color: white;
 }
 
 .playlist-names{
@@ -690,6 +703,13 @@ footer{
 
 
 
+.sidenav-responsive{
+  display: none;
+}
+
+
+
+
 
 
 
@@ -716,6 +736,17 @@ footer{
 
 @media screen and (max-width: 639px) {
 
+  .card{
+    width: calc(100% / 2);
+  }
+
+  .container-favourite-save{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
 }
 
 
@@ -726,6 +757,79 @@ footer{
 
 
 @media screen and (max-width: 522px) {
+
+  .container_main {
+    margin-left: 24px;
+  }
+
+  .sidenav{
+    display: none;
+  }
+
+  .sidenav-responsive{
+    padding-top: 5px;
+    width: 34px;
+    background-color: #000000;
+
+    height: 100%;
+    /* padding-bottom: 110px;  */
+    /* OPPURE */
+    /* ! 100px è l'altezza footer */
+    /* height: calc(100vh - 100px); */
+    overflow-y: hidden;
+  
+    /* si posiziona in alto a sinistra (anche sopra all'header) */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */ /** in questo caso non è necessario in quanto container-sidenav-up ha height 100% */
+    justify-content: space-between; /** in questo caso non è necessario in quanto container-sidenav-up ha height 100% */
+    
+    overflow-x: hidden;
+  }
+
+  .playlist-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sidenav-responsive nav ul * {
+    padding: 10px;
+  }
+
+  .container-sidenav-down{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 54px;
+  }
+
+  .playlist-icons ul li a img, .container-sidenav-down div a img {
+    padding: 2px;
+  }
+
+  .sidenav-responsive img, .container-sidenav-down div a img{
+    width: 24px;
+  }
+
+  #download-icon{
+    margin-right: 3px;
+    width: 30px;
+  }
+
+  #profile-icon{
+    width: 24px;
+  }
+
+  .card{
+    width: calc(100% / 0.5);
+  }
 
 }
 
