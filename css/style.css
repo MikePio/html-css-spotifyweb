@@ -46,6 +46,9 @@ h2{
   display: flex;
 }
 
+.pointer{
+  cursor: pointer;
+}
 
 /* * utility //////////////////////////////////////////////////////////////////////////////////*/
 .debug{
@@ -55,6 +58,7 @@ h2{
 .debug_b{
   border: 1px dashed #c8ff2f;
 }
+
 
 
 
@@ -203,15 +207,25 @@ main{
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* justify-content: space-between; */
 
   /* width: 300px; */
   
   /* ? CORRETTO????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????  */
   width: calc(100% / 6.7);
   
+  /* min-height: 335px; */
+  /* min-height: 335px; */
+  /* max-height: 335px; */
+  
   margin-top: 30px;
   margin-right: 15px;
   text-align: center;
+  cursor: pointer;
+}
+
+.card h3{
+  height: 99px;
 }
 
 .card > *:not(:first-child){
@@ -249,6 +263,10 @@ main{
   z-index: 2;
 }
 
+.song-image-circle.song-image:hover::after {
+  border-radius: 50%;
+}
+
 /* icona che scompare in hover con display none */
 .song-image i {
   display: none;
@@ -274,6 +292,7 @@ main{
 .card .creator, .subtitle{
   color: #6F6F6F;
   font-size: 1rem;
+  justify-self: end;
 }
 
 /* section3  */
@@ -329,18 +348,26 @@ main{
   margin-left: 10px;
 }
 
+.playlist h3{
+  font-size: 1.1em !important;
+}
+
 .explore li a, .playlist a:first-child{
   font-size: 1rem;
+  padding-top: 7px;
 }
 
 .explore li:first-child a{
   border-left: 3px solid #c8ff2f ;
   color: white;
+  padding-top: 7px;
 }
 
 .explore li a:focus{
   border-left: 3px solid #c8ff2f ;
   color: white;
+  padding-top: 7px;
+
 }
 
 .playlist-names{
@@ -368,7 +395,8 @@ padding-right: 5px;
   text-decoration: none;
   display: block;
   color: #6F6F6F;
-  font-size: 0.6rem;
+  /* font-size: 0.6rem; */
+  font-size: 0.95rem;
 }
 
 .sidenav a:hover {
@@ -389,6 +417,7 @@ padding-right: 5px;
   padding: 0;
   margin: 0;
   background-color: #000000;
+  padding-top: 7px;
 }
 
 .container-sidenav-down div:last-child{
@@ -494,7 +523,7 @@ footer{
 .container-listening-music img{
   width: 60px;
   height: 60px;
-  
+  cursor: pointer;
 }
 
 .container-listening-music *{
@@ -506,6 +535,7 @@ footer{
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  cursor: pointer;
 }
 
 .title-song{
@@ -608,6 +638,7 @@ footer{
   /* border-radius: 2.5px; */
   border-radius: 20px;
   border: none;
+  cursor: pointer;
 }
 
 .sound-bar {
