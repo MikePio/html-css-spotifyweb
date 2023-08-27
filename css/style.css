@@ -169,11 +169,13 @@ main{
 .nav-container-main li:first-child a{
   border-bottom: 3px solid #c8ff2f ;
   color: white;
+  padding-left: 5px
 }
 
 .nav-container-main a:focus{
   border-bottom: 3px solid #c8ff2f ;
   color: white;
+  padding-left: 5px
 }
 
 .nav-container-main a:hover{
@@ -212,7 +214,8 @@ main{
   /* width: 300px; */
   
   /* ? CORRETTO????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????  */
-  width: calc(100% / 6.7);
+  /* width: calc(100% / 6.7); */
+  width: calc(100% / 5);
   
   /* min-height: 335px; */
   /* min-height: 335px; */
@@ -372,7 +375,7 @@ main{
 
 .playlist-names{
   /* * 520px è la somma del footer + container-sidenav-down + (container-sidenav-up - playlist-names)  */
-  height: calc(100vh - 520px);
+  height: calc(100vh - 530px);
   /* ! aggiunge la scrollbar - non spacca il layout*/
   overflow: auto;
 }
@@ -710,6 +713,10 @@ footer{
   opacity: 1;
 }
 
+.time-song{
+  cursor: default;
+}
+
 /* * footer destra */
 .footer-container-right{
   height: 100px;
@@ -728,64 +735,98 @@ footer{
   /* width: 50%; */
 }
 
-
-
-
-
-
-
 .sidenav-responsive{
   display: none;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-/* * RESPONSIVE *************************************************************************************************************************** */
-@media screen and (max-width: 878px) {
-
+.nav-container-main { 
+  margin-bottom: 15px;
+}
+.nav-container-main li {
+    padding-bottom: 8px;
 }
 
 
+/* * RESPONSIVE *************************************************************************************************************************** */
+@media screen and (max-width: 2560px) {
+  .card h3{
+    font-size: 1.17em;
+  }
 
+}
 
+@media screen and (min-width: 1970px){
+  .card {
+    width: calc(100% / 7);
+  }
+}
 
+@media screen and (max-width: 1500px) {
+  .card h3{
+    font-size: 1em;
+  }
+}
 
+@media screen and (min-width: 1024px) and (max-width: 1970px) {
+  .card{
+    width: calc(100% / 6.8); 
+  }
+}
 
+@media screen and (min-width: 910px) and (max-width: 1024px) {
+  .card{
+    width: calc(100% / 5.7);
+  }
 
+  .sound-bar{
+    min-width: auto;
+  }
+}
 
+@media screen and (max-width: 878px) {
+  .sound-bar{
+    display: none;
+  }
+  .footer-container-right{
+    width: auto;
+    min-width: auto;
+  }
+  .card{
+    /* justify-content: center; */
+    width: 300px;
+    width: calc(100% / 2.2);
+  }
 
-
+}
 
 @media screen and (max-width: 639px) {
 
+  .nav-container-main{
+    margin-left: 10px;
+  }
+
   .card{
-    width: calc(100% / 2);
+    width: calc(100% / 1.1);
   }
 
   .container-favourite-save{
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 
   }
 
+  .container-cards{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    justify-content: center;
+    padding: 0 5px 0 15px;
+  }
+
+
 }
-
-
-
-
-
-
-
 
 @media screen and (max-width: 522px) {
 
@@ -799,7 +840,7 @@ footer{
 
   .sidenav-responsive{
     padding-top: 5px;
-    width: 34px;
+    width: 40px;
     background-color: #000000;
 
     height: 100%;
@@ -830,6 +871,10 @@ footer{
     justify-content: center;
   }
 
+  .playlist-icons *{
+    margin: 1.3px 0;
+  }
+  
   .sidenav-responsive nav ul * {
     padding: 10px;
   }
@@ -838,7 +883,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 54px;
+    margin-bottom: 62px;
   }
 
   .playlist-icons ul li a img, .container-sidenav-down div a img {
@@ -862,9 +907,23 @@ footer{
     width: calc(100% / 0.5);
   }
 
+  .footer-container-right{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+
+  .footer-container-right *{
+    margin: 5px 0;
+  }
+
 }
 
-
+@media screen and (max-width: 425px) {
+  .footer-container-right{
+    display: none;
+  }
+}
 
 
 
